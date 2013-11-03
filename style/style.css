@@ -1,0 +1,33 @@
+/* Reset */
+*{
+  padding: 0;
+  margin: 0 auto 0 auto;
+}
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* General */
+body {
+  text-align: center;  /* Container: IE Hack */
+  background: #F4F7ED repeat-x;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  line-height: 18px;
+  color: #333333;
+}
+
+/* Main */
+#container {
+  width:1024px;
+  margin: 4px auto 18px auto;
+  background-color: #999999;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+}
