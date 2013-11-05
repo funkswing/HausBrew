@@ -15,24 +15,15 @@ libraries:
 - name: django
   version: "1.3"
 
-skip_files:
-- ^(.*/)?app\.yaml
-- ^(.*/)?app\.yml
-- ^(.*/)?index\.yaml
-- ^(.*/)?index\.yml
-- ^(.*/)?#.*#
-- ^(.*/)?.*~
-- ^(.*/)?.*\.py[co]
-- ^(.*/)?.*/RCS/.*
-- ^(.*/)?\..*
-- ^(.*/)?.*\.gz
-- ^(.*/)?.*\.bak
-
 handlers:
 - url: /
   script: main.app
 - url: /index.html
   script: main.app
+# - url: /input_test.html
+#   script: input_test.app
+# - url: /output_test.html
+#   script: output_test.app
 
 # All URLs beginning with /stylesheets are treated as paths to static files in
 # the stylesheets/ directory. Note that static_dir handlers do not use a
@@ -45,23 +36,28 @@ handlers:
   static_files: static/\1
   upload: static/(.*\.(gif|png|jpg))
 
-##UNTESTED models##
-#description
-- url: /(.*?)_description.html
-  script: \1/\1_description.py
-#input
-- url: /(.*?)_input.html
-  script: \1/\1_input.py
-#output
-- url: /(.*?)_output.html
-  script: \1/\1_output.py  
-#algorithms
-- url: /(.*?)_algorithms.html
-  script: \1/\1_algorithm.py    
-#references
-- url: /(.*?)_references.html
-  script: \1/\1_references.py 
+# ##UNTESTED models##
+# #description
+- url: /testing.html
+  script: /testing/testing_desc.app
+# - url: /testing/testing_desc.html
+#   script: \1/testing_desc.app
+# #input
+# - url: /(.*?)_input.html
+#   script: \1/\1_input.app
+# #output
+# - url: /(.*?)_output.html
+#   script: \1/\1_output.app  
+# #algorithms
+# - url: /(.*?)_algorithms.html
+#   script: \1/\1_algorithm.app    
+# #references
+# - url: /(.*?)_references.html
+#   script: \1/\1_references.app 
+# #testing
+# - url: /(.*?)_test.html
+#   script: \1/\1_test.app
 
 #file not found
 - url: /.*
-  script: file_not_found.py
+  script: file_not_found.app
