@@ -16,6 +16,4 @@ class MainPage(webapp.RequestHandler):
         html = html + template.render (templatepath+'05main_footer.html', {})
         self.response.out.write(html)
 
-app = webapp.WSGIApplication([
-    ('/.*', MainPage),
-], debug=True)
+app = webapp.WSGIApplication([('/.*', MainPage),], debug=True)

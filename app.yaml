@@ -39,7 +39,7 @@ handlers:
 # ##UNTESTED models##
 # #description
 - url: /testing.html
-  script: /testing/testing_desc.app
+  script: testing/testing_desc.py
 # - url: /testing/testing_desc.html
 #   script: \1/testing_desc.app
 # #input
