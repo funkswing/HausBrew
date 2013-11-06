@@ -18,7 +18,7 @@ libraries:
 handlers:
 - url: /
   script: main.app
-- url: /index.html
+- url: /index\.html
   script: main.app
 # - url: /input_test.html
 #   script: input_test.app
@@ -38,11 +38,13 @@ handlers:
 
 # ##UNTESTED models##
 # #description
-- url: /testing.html
-  script: testing/testing_desc.py
-# - url: /testing/testing_desc.html
-#   script: \1/testing_desc.app
+# - url: /testing_desc\.html
+#   script: testing.testing_desc.app
+- url: /(.*?)_desc.html
+  script: \1.testing_desc.app
 # #input
+- url: /(.*?)_input.html
+  script: \1.testing_input.app
 # - url: /(.*?)_input.html
 #   script: \1/\1_input.app
 # #output
